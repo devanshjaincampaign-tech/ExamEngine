@@ -1,0 +1,16 @@
+﻿# Compiled classes and build output
+out/
+*.class
+
+# Runtime data files
+data/results.dat
+data/index.dat
+
+# IDE configurations and project files
+.idea/
+.vscode/
+*.iml
+
+
+notes.md
+Scratch*.java
