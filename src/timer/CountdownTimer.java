@@ -12,10 +12,13 @@ public class CountdownTimer implements Runnable{
         paused = false;
         running = false;
     }
-    public void start(){
+    public synchronized void start(){
+        if (running) return;
         running = true;
         paused = false;
+        secondsRemaining = Math.max(0, secondsRemaining);
         timerThread = new Thread(this);
+        timerThread.setDaemon(true);
         timerThread.start();
     }
     public synchronized void pause(){
@@ -29,6 +32,7 @@ public class CountdownTimer implements Runnable{
         paused = false;
         running = false;
         notifyAll();
+        if (timerThread != null) timerThread.interrupt();
     }
     public int getSecondsRemaining(){
         return secondsRemaining;

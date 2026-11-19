@@ -4,8 +4,8 @@ public class TrueFalseQuestion extends Question {
 
     private final boolean correct;
 
-    public TrueFalseQuestion(String text, boolean correct, int marks) {
-        super(text, marks);
+    public TrueFalseQuestion(String id, String text, double marks, boolean correct) {
+        super(id, text, marks);
         this.correct = correct;
     }
 

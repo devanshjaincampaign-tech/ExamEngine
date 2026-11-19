@@ -1,0 +1,3 @@
+MCQ|Q1|What is heap memory used for?|5|A) Local variables,B) Object allocation,C) Method metadata,D) Instructions|B
+TF|Q2|RandomAccessFile records in this project are 56 bytes.|5|true
+SA|Q3|Which keyword creates a subclass in Java?|5|extends
